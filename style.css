@@ -1,0 +1,167 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #fffefc, #fff1f9);
+  color: #333;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #FF69EB;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-size: 1.1rem;
+  margin: 1rem 0 0.5rem;
+  color: #FF86C8;
+}
+
+input[type="number"] {
+  padding: 0.6rem;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 200px;
+  border: 2px solid #FF86C8;
+  border-radius: 6px;
+  background: #fff;
+  color: #333;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: #FFBF81;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+ul#gameList li:hover {
+  background: #FF86C8;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 12px rgba(255, 105, 235, 0.25);
+  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul#gameList li:active {
+  transform: scale(0.98);
+  box-shadow: 0 3px 8px rgba(255, 105, 235, 0.25);
+  background-color: #ff69eb;
+}
+
+ul#gameList {
+  margin-top: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+ul#gameList li {
+  background: #FFA3A5;
+  color: #fff;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  font-weight: 500;
+}
+
+ul#gameList li:hover {
+  background: #FF86C8;
+  transform: scale(1.02);
+}
+
+#rules {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(255, 105, 235, 0.15);
+  margin-top: 2rem;
+}
+
+#rules h2 {
+  font-size: 1.6rem;
+  color: #FF69EB;
+  margin-bottom: 0.75rem;
+}
+
+#rules p {
+  font-size: 1rem;
+  color: #333;
+}
+select {
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  border: 2px solid #FF86C8;
+  border-radius: 8px;
+  background-color: #fffafc;
+  color: #FF69EB;
+  width: 100%;
+  max-width: 250px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='30,50 70,90 110,50' stroke='%23FF69EB' stroke-width='15' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+}
+
+select:focus {
+  outline: none;
+  border-color: #FF69EB;
+  box-shadow: 0 0 8px rgba(255, 105, 235, 0.3);
+}
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
+select, button {
+  display: block;
+  margin: 1rem auto;
+}
+
+.game-rules {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.game-rules.hidden {
+  display: none;
+}
+
+/* Mobile Responsive Tweaks */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  input[type="number"], button {
+    width: 100%;
+  }
+  
+  ul#gameList li, #rules {
+    padding: 1rem;
+  }
+  ul#gameList li:active,
+ul#gameList li.force-touch {
+  background-color: #ff69eb;
+  transform: scale(0.96);
+  box-shadow: 0 3px 8px rgba(255, 105, 235, 0.3);
+}
+}

@@ -1,0 +1,164 @@
+[
+  {
+    "name": "Zip Zap Zop",
+    "minPlayers": 3,
+    "maxPlayers": 20,
+    "rules": "Players stand in a circle. One player starts by clapping their hands, pointing at another player, and saying 'Zip'. The pointed player must immediately respond by doing the same to another person while saying 'Zap', and the third person continues with 'Zop'. The pattern continues cycling 'Zip', 'Zap', 'Zop'. If anyone hesitates, speaks out of order, or says the wrong word, they\u2019re out. Last person standing wins, or restart after a few rounds for fun."
+  },
+  {
+    "name": "Two-Headed Expert",
+    "minPlayers": 2,
+    "maxPlayers": 2,
+    "rules": "Two players stand side by side, pretending to be one expert with two heads. An audience member or another player asks them questions about a silly topic like 'how to babysit a dinosaur'. The expert answers one word at a time, alternating between the two players. For example: Player 1: 'To', Player 2: 'begin', Player 1: 'you', Player 2: 'must', etc. The goal is to make it flow while being funny and staying in sync."
+  },
+  {
+    "name": "One Word Story",
+    "minPlayers": 2,
+    "maxPlayers": 10,
+    "rules": "Players sit or stand in a circle. Together, they tell a story one word at a time, going around in order. For example: Player 1: 'Once', Player 2: 'upon', Player 3: 'a', Player 4: 'time'... The story continues until it reaches a natural or funny end. Encourage creative ideas, but don\u2019t overthink! Keep the rhythm going."
+  },
+  {
+    "name": "Yes, And",
+    "minPlayers": 2,
+    "maxPlayers": 10,
+    "rules": "Two or more players act out a scene. Every time someone speaks, the next person must respond by starting their line with 'Yes, and...' to agree and add more information. Example: Player A: 'You brought a tiger to school?!' Player B: 'Yes, and he\u2019s teaching math class!' This helps build scenes with positivity and creativity. Don\u2019t say 'no' or deny what's been said."
+  },
+  {
+    "name": "Alphabet Game",
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "rules": "Two players start a scene. The first line must begin with the letter A, the next with B, and so on through the alphabet. Example: A - 'Alligators scare me.' B - 'But they\u2019re so friendly!' C - 'Can\u2019t trust a smiling reptile.' Continue until Z. You can play with others stepping in if someone gets stuck or reset when needed."
+  },
+  {
+    "name": "Party Quirks",
+    "minPlayers": 4,
+    "maxPlayers": 8,
+    "rules": "One player acts as the host of a party. The others are guests with funny or odd quirks (e.g., thinks they\u2019re a cat, keeps hearing voices, acts like a robot). These quirks are either pre-assigned secretly or written down beforehand. As the party goes on, the host must guess each person\u2019s quirk. The guests should stay in character without giving away the answer too easily."
+  },
+  {
+    "name": "Gibberish Translator",
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "rules": "Two players stand in front of the group. One is a 'speaker' of an alien or imaginary language and the other is a 'translator'. The speaker gives a passionate, nonsense-filled speech using gibberish words. The translator interprets it seriously into English for the audience. It\u2019s funnier when the translator makes up meaningful but absurd translations!"
+  },
+  {
+    "name": "Freeze",
+    "minPlayers": 3,
+    "maxPlayers": 10,
+    "rules": "Two players start a scene. At any point, someone in the audience yells 'Freeze!' The players must immediately freeze in place. The person who yelled steps in, taps one of them out, and takes their frozen pose exactly. They then start a completely new scene based on that position. Keep the game fast-paced with lots of tagging in and creativity!"
+  },
+  {
+    "name": "Emotional Switch",
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "rules": "Two players perform a basic scene. At random moments, someone calls out an emotion like 'angry', 'excited', or 'jealous'. The players must immediately switch to that emotion while continuing the same scene. The changes can be frequent and unexpected. Helps practice emotional range and quick reactions!"
+  },
+  {
+    "name": "Expert Interview",
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "rules": "One player acts as a news reporter or host. Another player is the 'expert' on a made-up or ridiculous topic (e.g., underwater basket weaving for cats). The reporter asks serious questions while the expert improvises answers on the spot. Try to stay in character and make the conversation sound real\u2014even if the subject is totally silly!"
+  },
+  {
+    "name": "Scene Replay",
+    "minPlayers": 3,
+    "maxPlayers": 6,
+    "rules": "Players perform a short scene, then replay it in different styles or genres."
+  },
+  {
+    "name": "World\u2019s Worst",
+    "minPlayers": 3,
+    "maxPlayers": 10,
+    "rules": "Players take turns stepping forward and giving examples of the world\u2019s worst [job/character/etc.]."
+  },
+  {
+    "name": "Genre Rollercoaster",
+    "minPlayers": 3,
+    "maxPlayers": 6,
+    "rules": "Act out a scene and switch genres mid-scene as suggested by the audience."
+  },
+  {
+    "name": "Pan Left",
+    "minPlayers": 4,
+    "maxPlayers": 8,
+    "rules": "Players form a square. The front two players do a scene. When 'Pan left' is called, the square rotates and a new scene begins."
+  },
+  {
+    "name": "Slow Motion Commentary",
+    "minPlayers": 2,
+    "maxPlayers": 4,
+    "rules": "Two players perform a slow-motion scene while others commentate like sports announcers."
+  },
+  {
+    "name": "Good Cop, Bad Cop",
+    "minPlayers": 3,
+    "maxPlayers": 5,
+    "rules": "One player is a suspect. Two others are cops, one nice and one aggressive, trying to get a confession."
+  },
+  {
+    "name": "What Are You Doing?",
+    "minPlayers": 2,
+    "maxPlayers": 10,
+    "rules": "One player mimes an action. Another asks 'What are you doing?' and the first replies with something completely different, which the second must then mime."
+  },
+  {
+    "name": "Fortunately, Unfortunately",
+    "minPlayers": 3,
+    "maxPlayers": 10,
+    "rules": "Players alternate lines in a story, starting with 'Fortunately...' or 'Unfortunately...'"
+  },
+  {
+    "name": "Slide Show",
+    "minPlayers": 4,
+    "maxPlayers": 8,
+    "rules": "Two players narrate a slideshow presentation. Others pose as the slides in silly ways."
+  },
+  {
+    "name": "Five Things",
+    "minPlayers": 3,
+    "maxPlayers": 10,
+    "rules": "One player is given a category and must act out five things from it while others guess."
+  },
+  {
+    "name": "Lines from a Hat",
+    "minPlayers": 3,
+    "maxPlayers": 10,
+    "rules": "Players act out a scene, randomly pulling written lines from a hat to incorporate."
+  },
+  {
+    "name": "Oscar-Winning Moment",
+    "minPlayers": 2,
+    "maxPlayers": 6,
+    "rules": "Players act a scene. At any moment, someone yells 'Oscar-winning moment!' and the player must deliver an over-the-top emotional monologue."
+  },
+  {
+    "name": "Character Monologue",
+    "minPlayers": 1,
+    "maxPlayers": 1,
+    "rules": "Create a unique character (e.g., a pirate barista, a retired superhero, a ghost tour guide) and deliver a 1\u20132 minute monologue from their point of view. Talk about their day, a problem they're facing, or a story from their life. Focus on developing a distinct voice, emotion, and physicality for the character."
+  },
+  {
+    "name": "Mirror Emotions",
+    "minPlayers": 1,
+    "maxPlayers": 1,
+    "rules": "Stand in front of a mirror and cycle through different emotions (happy, sad, excited, scared, angry, confused). Practice changing your facial expressions and body language dramatically to match the feeling. Try adding lines of dialogue or reactions as each emotion changes."
+  },
+  {
+    "name": "Gibberish Rant",
+    "minPlayers": 1,
+    "maxPlayers": 1,
+    "rules": "Choose an imaginary topic or situation (e.g., 'I just found out my toaster is alive') and give a full passionate speech about it \u2014 in gibberish. Use made-up sounds but stay expressive with gestures, facial expressions, and pacing. Try translating it afterward or imagining subtitles."
+  },
+  {
+    "name": "Commercial Time",
+    "minPlayers": 1,
+    "maxPlayers": 1,
+    "rules": "Pretend you're on camera shooting a commercial for a ridiculous product like 'invisible toothpaste' or 'reverse pants'. Make it persuasive, high-energy, and include fake benefits and slogans. Record yourself for extra fun."
+  },
+  {
+    "name": "Scene Shifter",
+    "minPlayers": 1,
+    "maxPlayers": 1,
+    "rules": "Play out a short scene where you play both characters. Switch back and forth physically, changing voice, tone, and body language. Try a simple situation like a customer and a barista, or an alien and a scientist. Emphasize clear character shifts."
+  }
+]
