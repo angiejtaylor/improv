@@ -152,12 +152,18 @@ h1 {
   background: rgba(0, 0, 0, 0.05);
 }
 
-.find-games-btn {
-  display: block;
-  width: 100%;
-  max-width: 200px;
+.button-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
   margin: 0 auto 2rem;
-  padding: 1rem 2rem;
+  max-width: 450px;
+  width: 100%;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 1rem 1.5rem;
   font-size: 1.1rem;
   background: linear-gradient(135deg, #FFBF81, #FFA3A5);
   color: white;
@@ -168,15 +174,25 @@ h1 {
   letter-spacing: 0.5px;
   box-shadow: 0 8px 25px rgba(255, 191, 129, 0.3);
   transition: all 0.3s ease;
+  min-width: 0;
 }
 
-.find-games-btn:hover {
+.action-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 35px rgba(255, 191, 129, 0.4);
 }
 
-.find-games-btn:active {
+.action-btn:active {
   transform: translateY(0);
+}
+
+.random-btn {
+  background: linear-gradient(135deg, #FF69EB, #FF86C8);
+  box-shadow: 0 8px 25px rgba(255, 105, 235, 0.3);
+}
+
+.random-btn:hover {
+  box-shadow: 0 12px 35px rgba(255, 105, 235, 0.4);
 }
 
 ul#gameList {
@@ -243,7 +259,17 @@ ul#gameList li:hover {
     font-size: 2rem;
   }
 
-  #dropdownButton, .find-games-btn {
+  #dropdownButton {
+    padding: 0.9rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .action-btn {
     padding: 0.9rem 1.2rem;
     font-size: 1rem;
   }
