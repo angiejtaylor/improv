@@ -6,162 +6,245 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #fffefc, #fff1f9);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #FF69EB 0%, #FF86C8 50%, #FFBF81 100%);
+  min-height: 100vh;
   color: #333;
   padding: 2rem 1rem;
-  max-width: 800px;
-  margin: auto;
-  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(255, 105, 235, 0.15);
+  max-width: 600px;
+  width: 100%;
 }
 
 h1 {
-  font-size: 2.2rem;
-  color: #FF69EB;
+  font-size: 2.5rem;
+  background: linear-gradient(45deg, #FF69EB, #FF86C8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
 }
 
-label {
-  display: block;
-  font-size: 1.1rem;
-  margin: 1rem 0 0.5rem;
-  color: #FF86C8;
-}
-
-input[type="number"] {
-  padding: 0.6rem;
-  font-size: 1rem;
+.custom-dropdown {
+  position: relative;
   width: 100%;
-  max-width: 200px;
-  border: 2px solid #FF86C8;
-  border-radius: 6px;
-  background: #fff;
+  max-width: 300px;
+  margin: 0 auto 2rem;
+}
+
+#dropdownButton {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #FF69EB, #FF86C8);
+  color: white;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(255, 105, 235, 0.3);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+#dropdownButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(255, 105, 235, 0.4);
+}
+
+#dropdownButton:active {
+  transform: translateY(0);
+}
+
+#dropdownButton::after {
+  content: '▼';
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+#dropdownButton.open::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  margin-top: 0.5rem;
+  box-shadow: 0 15px 35px rgba(255, 105, 235, 0.15);
+  z-index: 100;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 105, 235, 0.2);
+  animation: dropdownSlide 0.3s ease;
+}
+
+@keyframes dropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-options.show {
+  display: block;
+}
+
+.dropdown-option {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
   color: #333;
-}
-
-button {
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  background-color: #FFBF81;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-ul#gameList li:hover {
-  background: #FF86C8;
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 6px 12px rgba(255, 105, 235, 0.25);
-  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
-}
-
-ul#gameList li:active {
-  transform: scale(0.98);
-  box-shadow: 0 3px 8px rgba(255, 105, 235, 0.25);
-  background-color: #ff69eb;
-}
-
-ul#gameList {
-  margin-top: 2rem;
-  list-style: none;
-  padding: 0;
-}
-
-ul#gameList li {
-  background: #FFA3A5;
-  color: #fff;
-  padding: 1rem;
-  margin-bottom: 0.75rem;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   font-weight: 500;
 }
 
+.dropdown-option:last-child {
+  border-bottom: none;
+  border-radius: 0 0 12px 12px;
+}
+
+.dropdown-option:first-child {
+  border-radius: 12px 12px 0 0;
+}
+
+.dropdown-option:hover {
+  background: linear-gradient(135deg, rgba(255, 105, 235, 0.1), rgba(255, 134, 200, 0.1));
+  color: #FF69EB;
+  transform: translateX(5px);
+}
+
+.dropdown-options::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropdown-options::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #FF86C8, #FF69EB);
+  border-radius: 3px;
+}
+
+.dropdown-options::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.find-games-btn {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #FFBF81, #FFA3A5);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 25px rgba(255, 191, 129, 0.3);
+  transition: all 0.3s ease;
+}
+
+.find-games-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(255, 191, 129, 0.4);
+}
+
+.find-games-btn:active {
+  transform: translateY(0);
+}
+
+ul#gameList {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+ul#gameList li {
+  background: linear-gradient(135deg, #FFA3A5, #FF86C8);
+  color: white;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(255, 163, 165, 0.2);
+}
+
 ul#gameList li:hover {
-  background: #FF86C8;
-  transform: scale(1.02);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 134, 200, 0.3);
 }
 
 #rules {
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(255, 105, 235, 0.15);
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(255, 105, 235, 0.1);
   margin-top: 2rem;
+  border: 1px solid rgba(255, 105, 235, 0.1);
 }
 
 #rules h2 {
-  font-size: 1.6rem;
-  color: #FF69EB;
-  margin-bottom: 0.75rem;
+  font-size: 1.8rem;
+  background: linear-gradient(45deg, #FF69EB, #FF86C8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 #rules p {
-  font-size: 1rem;
-  color: #333;
-}
-select {
-  font-size: 1rem;
-  padding: 0.6rem 1rem;
-  border: 2px solid #FF86C8;
-  border-radius: 8px;
-  background-color: #fffafc;
-  color: #FF69EB;
-  width: 100%;
-  max-width: 250px;
-  appearance: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='30,50 70,90 110,50' stroke='%23FF69EB' stroke-width='15' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 0.75rem center;
-  background-size: 1rem;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
 }
 
-select:focus {
-  outline: none;
-  border-color: #FF69EB;
-  box-shadow: 0 0 8px rgba(255, 105, 235, 0.3);
-}
 .visually-hidden {
   position: absolute;
   left: -9999px;
 }
-select, button {
-  display: block;
-  margin: 1rem auto;
-}
 
-.game-rules {
-  margin-top: 0.5rem;
-  font-size: 0.95rem;
-  color: #fff;
-}
-
-.game-rules.hidden {
-  display: none;
-}
-
-/* Mobile Responsive Tweaks */
+/* Mobile Responsive */
 @media (max-width: 600px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  input[type="number"], button {
-    width: 100%;
+  .container {
+    margin: 1rem;
+    padding: 1.5rem;
   }
   
-  ul#gameList li, #rules {
-    padding: 1rem;
+  h1 {
+    font-size: 2rem;
   }
-  ul#gameList li:active,
-ul#gameList li.force-touch {
-  background-color: #ff69eb;
-  transform: scale(0.96);
-  box-shadow: 0 3px 8px rgba(255, 105, 235, 0.3);
-}
+
+  #dropdownButton, .find-games-btn {
+    padding: 0.9rem 1.2rem;
+    font-size: 1rem;
+  }
 }
