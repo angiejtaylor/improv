@@ -72,7 +72,14 @@ document.getElementById('dropdownButton').classList.remove('open');
   gameList.innerHTML = '';
 
   if (!playerCount) {
-    gameList.innerHTML = "<li>Please select number of players first!</li>";
+    // Show all games
+    gamesData.forEach(game => {
+      const li = document.createElement('li');
+      li.textContent = game.name;
+      li.style.cursor = 'pointer';
+      li.onclick = () => showRules(game);
+      gameList.appendChild(li);
+    });
     return;
   }
 
