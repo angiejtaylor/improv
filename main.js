@@ -9,6 +9,9 @@ function getGames() {
   const gameList = document.getElementById('gameList');
   const rules = document.getElementById('rules');
   rules.style.display = 'none';
+// Hide dropdown if open
+document.getElementById('dropdownOptions').classList.remove('show');
+document.getElementById('dropdownButton').classList.remove('open');
   gameList.innerHTML = '';
 
   if (!playerCount) {
@@ -42,6 +45,9 @@ function getRandomGame() {
   if (!playerCount) {
     gameList.innerHTML = "<li>Please select number of players first!</li>";
     rules.style.display = 'none';
+// Hide dropdown if open
+document.getElementById('dropdownOptions').classList.remove('show');
+document.getElementById('dropdownButton').classList.remove('open');
     return;
   }
 
@@ -52,19 +58,18 @@ function getRandomGame() {
   if (filteredGames.length === 0) {
     gameList.innerHTML = "<li>No games available for that player count.</li>";
     rules.style.display = 'none';
+// Hide dropdown if open
+document.getElementById('dropdownOptions').classList.remove('show');
+document.getElementById('dropdownButton').classList.remove('open');
     return;
   }
 
   // Pick a random game
   const randomGame = filteredGames[Math.floor(Math.random() * filteredGames.length)];
   
-  // Clear the game list and show the random selection
+  // Just clear the game list and show the rules directly
   gameList.innerHTML = '';
-  const li = document.createElement('li');
-  li.textContent = `🎲 ${randomGame.name}`;
-  li.style.cursor = 'pointer';
-  li.style.background = 'linear-gradient(135deg, #FF69EB, #FF86C8)';
-  li.onclick = () => showRules(randomGame);
+  showRules(randomGame);
   gameList.appendChild(li);
   
   // Automatically show the rules
