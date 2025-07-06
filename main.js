@@ -74,7 +74,14 @@ function getRandomGame() {
 function showRules(game) {
   const rulesEl = document.getElementById('rules');
   document.getElementById('gameName').textContent = game.name;
-  document.getElementById('gameRules').textContent = game.rules;
+
+  const formattedRules = `
+  <p>🎮 <strong>What You Need:</strong><br>${game.whatYouNeed}</p><br>
+  <p>🎲 <strong>How to Play:</strong><br>${game.howToPlay}</p><br>
+  <p>😂 <strong>Tips for Fun:</strong><br>${game.tips || 'Just go with the flow, stay in character, and have fun!'}</p>
+  `;
+
+  document.getElementById('gameRules').innerHTML = formattedRules;
   rulesEl.style.display = 'block';
   rulesEl.scrollIntoView({ behavior: 'smooth' });
 }
