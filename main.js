@@ -77,7 +77,7 @@ function showRules(game) {
 
   const formattedRules = `
   <p>🎮 <strong>What You Need:</strong><br>${game.whatYouNeed}</p><br>
-  <p>🎲 <strong>How to Play:</strong><br>${game.howToPlay}</p><br>
+  <div><strong>🎲 How to Play:</strong>${game.howToPlay}</div><br>
   <p>😂 <strong>Tips for Fun:</strong><br>${game.tips || 'Just go with the flow, stay in character, and have fun!'}</p>
   `;
 
