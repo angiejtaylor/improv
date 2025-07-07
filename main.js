@@ -62,7 +62,8 @@ fetch('games.json')
   .then(data => gamesData = data);
 
 function getGames() {
-  const playerCount = parseInt(document.getElementById('players').value);
+  const rawValue = document.getElementById('players').value;
+  const playerCount = rawValue === "10plus" ? 10 : parseInt(rawValue);
   const gameList = document.getElementById('gameList');
   const rules = document.getElementById('rules');
   rules.style.display = 'none';
@@ -122,13 +123,19 @@ function showRules(game) {
 document.addEventListener('DOMContentLoaded', function() {
   // Populate dropdown options
   const dropdownOptions = document.getElementById('dropdownOptions');
-  for (let i = 1; i <= 20; i++) {
+  for (let i = 1; i <= 9; i++) {
     const option = document.createElement('li');
     option.textContent = i;
     option.dataset.value = i;
     option.classList.add('dropdown-option');
     dropdownOptions.appendChild(option);
   }
+
+  const option10Plus = document.createElement('li');
+  option10Plus.textContent = "10+";
+  option10Plus.dataset.value = "10+";
+  option10Plus.classList.add('dropdown-option');
+  dropdownOptions.appendChild(option10Plus);
 
   // Toggle dropdown visibility
   const dropdownButton = document.getElementById('dropdownButton');
@@ -141,12 +148,16 @@ document.addEventListener('DOMContentLoaded', function() {
   dropdownOptions.addEventListener('click', (e) => {
     if (e.target.matches('.dropdown-option')) {
       const value = e.target.dataset.value;
-      dropdownButton.textContent = value + (value === "1" ? " player" : " players");
+
+      if (value === "10+") {
+        dropdownButton.textContent = "10+ players";
+        document.getElementById('players').value = "10plus";
+      } else {
+        dropdownButton.textContent = value + (value === "1" ? " player" : " players");
+        document.getElementById('players').value = value;
+      }
       dropdownOptions.classList.remove('show');
       dropdownButton.classList.remove('open');
-
-      // Set hidden input value
-      document.getElementById('players').value = value;
     }
   });
 
